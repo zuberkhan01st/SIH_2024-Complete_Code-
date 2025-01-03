@@ -30,3 +30,28 @@ This solution supports:
 - **IoT Integration**: Real-time data from IoT devices to monitor cleanliness.
 - **Comprehensive Dashboard**: An interactive interface built with modern frameworks to visualize data and insights.
 - **Modular Codebase**: Organized into separate directories for backend, frontend, and AI models.
+
+
+## Technologies Used
+
+### Frontend
+- React.js
+- Next.js
+- Chart.js (for data visualization)
+
+### Backend
+- Node.js
+- Express.js
+- Flask (for AI model integration)
+
+### AI/ML
+- YOLO (You Only Look Once) for object detection
+- TensorFlow/Keras for model training
+
+### IoT
+- Arduino
+- MQTT Protocol
+
+### Others
+- Docker (for containerization)
+- MongoDB and PostgreSQL (for database management)
