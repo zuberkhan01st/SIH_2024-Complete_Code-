@@ -1,0 +1,4 @@
+cloudinary
+opencv-python
+pyserial
+serial 

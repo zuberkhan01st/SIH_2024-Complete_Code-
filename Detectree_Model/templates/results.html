@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processed Image</title>
+    <style>
+        /* Base styling for the body */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .image-section img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+        }
+
+        .percentage-section {
+            text-align: center;
+            font-size: 18px;
+            color: #007BFF;
+            margin-top: 20px;
+        }
+
+        .back-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            width: 150px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive styling for smaller devices */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            h1, h2 {
+                font-size: 22px;
+            }
+
+            .percentage-section {
+                font-size: 16px;
+            }
+
+            .back-btn {
+                width: 100%;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Processed Image Results</h1>
+      
+      <!-- Original Image Section -->
+      <div class="image-section">
+        <h2>Original Image</h2>
+        <img src="{{ url_for('upload_file', filename=original_image) }}" alt="Original Image">
+      </div>
+      
+      <!-- Processed Image Section -->
+      <div class="image-section">
+        <h2>Processed Image</h2>
+        <img src="{{ url_for('processed_file', filename=processed_image) }}" alt="Processed Image">
+      </div>
+      
+      <!-- Tree Detection Percentage Section -->
+      <div class="percentage-section">
+        <h2>Tree Detection Percentage</h2>
+        <p><strong>{{ tree_percentage }}%</strong></p>
+      </div>
+
+      <!-- Button to go back -->
+      <a href="/" class="back-btn">Upload Another</a>
+    </div>
+
+    <script>
+        // Example JavaScript for potential interactivity, 
+        // if you want to add dynamic elements in the future
+        window.onload = function() {
+            // Placeholder for adding future JS functionality.
+        };
+    </script>
+  </body>
+</html>

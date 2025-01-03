@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOLO Image Processing</title>
+    <script>
+        async function uploadImage(event) {
+            event.preventDefault();
+
+            const imageInput = document.getElementById('imageInput');
+            const resultDisplay = document.getElementById('result');
+            const imageDisplay = document.getElementById('processedImage');
+
+            if (!imageInput.files.length) {
+                alert('Please select an image file.');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('image', imageInput.files[0]);
+
+            try {
+                resultDisplay.textContent = 'Processing...';
+
+                const response = await fetch('http://127.0.0.1:5000/process_image', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to process image');
+                }
+
+                const result = await response.json();
+
+                console.log('Response:', result); // Debugging
+
+                resultDisplay.textContent = `Total Area: ${result.total_area}, Percentage Waste: ${result.percentage_waste}%`;
+
+                // Display the processed image
+                imageDisplay.src = `data:image/jpeg;base64,${result.processed_image}`;
+                imageDisplay.style.display = 'block';
+
+            } catch (error) {
+                console.error('Error:', error);
+                resultDisplay.textContent = 'Error processing image';
+            }
+        }
+    </script>
+</head>
+<body>
+
+<h1>YOLO Image Processing</h1>
+
+<form onsubmit="uploadImage(event)">
+    <input type="file" id="imageInput" accept="image/*" required>
+    <button type="submit">Upload Image</button>
+</form>
+
+<p id="result"></p>
+<img id="processedImage" style="display:none;" alt="Processed Image">
+
+</body>
+</html>

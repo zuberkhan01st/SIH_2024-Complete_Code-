@@ -1,0 +1,6 @@
+Post ID,Post Name,Region,Avg. Resolution Time (Hours),Alerts Generated,Paper Efficiency (%),Monthly Paper Waste (kg),Rank
+101,Pune Head Office,West,4.5,10,85,25,1
+102,Mumbai GPO,West,6.0,12,80,30,2
+103,Delhi GPO,North,7.5,15,75,40,3
+104,Kolkata GPO,East,5.0,8,88,20,4
+105,Chennai GPO,South,5.5,11,82,28,5

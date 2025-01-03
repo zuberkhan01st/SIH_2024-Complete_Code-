@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image</title>
+    <style>
+        /* Styling the body and base elements */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        h1, h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .upload-area {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 2px dashed #007BFF;
+            border-radius: 8px;
+            padding: 30px;
+            background-color: #f9f9f9;
+            cursor: pointer;
+        }
+
+        .upload-area:hover {
+            background-color: #eef3ff;
+        }
+
+        .upload-area input[type="file"] {
+            display: none;
+        }
+
+        .upload-area label {
+            font-size: 18px;
+            color: #007BFF;
+            cursor: pointer;
+        }
+
+        /* Style the image preview */
+        .image-preview {
+            display: none;
+            margin-top: 20px;
+            max-width: 100%;
+        }
+
+        /* Style for the upload progress bar */
+        .progress-bar-container {
+            display: none;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .progress-bar {
+            height: 8px;
+            width: 0;
+            background-color: #007BFF;
+            border-radius: 4px;
+            transition: width 0.4s ease;
+        }
+
+        /* Responsive design using media queries */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 15px;
+            }
+
+            .upload-area {
+                padding: 20px;
+            }
+
+            h1, h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Upload an Image</h1>
+      <form id="uploadForm" action="/" method="post" enctype="multipart/form-data">
+        <div class="upload-area" id="uploadArea">
+          <label for="fileInput">Click to choose an image or drag & drop</label>
+          <input type="file" id="fileInput" name="file" accept="image/*">
+        </div>
+
+        <img id="imagePreview" class="image-preview" alt="Image Preview">
+
+        <div class="progress-bar-container">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <button type="submit" style="margin-top: 20px; width: 100%; padding: 10px; background-color: #007BFF; color: white; border: none; border-radius: 4px; cursor: pointer;">Upload</button>
+      </form>
+    </div>
+
+    <script>
+      // Grab the elements
+      const uploadArea = document.getElementById('uploadArea');
+      const fileInput = document.getElementById('fileInput');
+      const imagePreview = document.getElementById('imagePreview');
+      const progressBar = document.getElementById('progressBar');
+      const progressBarContainer = document.querySelector('.progress-bar-container');
+      const uploadForm = document.getElementById('uploadForm');
+
+      // Handle file input click and drag-drop
+      uploadArea.addEventListener('click', () => fileInput.click());
+      uploadArea.addEventListener('dragover', (e) => {
+          e.preventDefault();
+          uploadArea.style.backgroundColor = '#eef3ff';
+      });
+      uploadArea.addEventListener('dragleave', () => {
+          uploadArea.style.backgroundColor = '#f9f9f9';
+      });
+      uploadArea.addEventListener('drop', (e) => {
+          e.preventDefault();
+          fileInput.files = e.dataTransfer.files;
+          previewImage(fileInput.files[0]);
+      });
+
+      // Show image preview on file select
+      fileInput.addEventListener('change', (e) => {
+          if (fileInput.files[0]) {
+              previewImage(fileInput.files[0]);
+          }
+      });
+
+      // Function to preview image
+      function previewImage(file) {
+          const reader = new FileReader();
+          reader.onload = function(e) {
+              imagePreview.src = e.target.result;
+              imagePreview.style.display = 'block';
+          };
+          reader.readAsDataURL(file);
+      }
+
+      // Handle form submit to show upload progress
+      uploadForm.addEventListener('submit', function(e) {
+          e.preventDefault();  // Prevent the form from submitting
+
+          progressBarContainer.style.display = 'block';
+          let progress = 0;
+          const interval = setInterval(() => {
+              progress += 10;
+              progressBar.style.width = progress + '%';
+              if (progress >= 100) {
+                  clearInterval(interval);
+                  uploadForm.submit();  // Submit the form after progress reaches 100%
+              }
+          }, 200);
+      });
+    </script>
+  </body>
+</html>
+

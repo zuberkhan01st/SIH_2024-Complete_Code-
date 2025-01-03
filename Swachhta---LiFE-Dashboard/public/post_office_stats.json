@@ -1,0 +1,173 @@
+[
+    {
+        "State": "Maharashtra",
+        "Divisional": "Mumbai",
+        "City": "Mumbai City",
+        "Alerts Resolved": 145,
+        "Greenery Detection": 54,
+        "Sustainability Promoted": 66,
+        "Energy Efficiency Improved": 74
+    },
+    {
+        "State": "Maharashtra",
+        "Divisional": "Mumbai",
+        "City": "Thane",
+        "Alerts Resolved": 130,
+        "Greenery Detection": 50,
+        "Sustainability Promoted": 62,
+        "Energy Efficiency Improved": 70
+    },
+    {
+        "State": "Maharashtra",
+        "Divisional": "Mumbai",
+        "City": "Navi Mumbai",
+        "Alerts Resolved": 150,
+        "Greenery Detection": 55,
+        "Sustainability Promoted": 68,
+        "Energy Efficiency Improved": 72
+    },
+    {
+        "State": "Maharashtra",
+        "Divisional": "Mumbai",
+        "City": "Kalyan",
+        "Alerts Resolved": 120,
+        "Greenery Detection": 48,
+        "Sustainability Promoted": 60,
+        "Energy Efficiency Improved": 65
+    },
+    {
+        "State": "Maharashtra",
+        "Divisional": "Mumbai",
+        "City": "Vashi",
+        "Alerts Resolved": 110,
+        "Greenery Detection": 46,
+        "Sustainability Promoted": 58,
+        "Energy Efficiency Improved": 64
+    },
+    {
+        "State": "Maharashtra",
+        "Divisional": "Pune",
+        "City": "Pune City",
+        "Alerts Resolved": 148,
+        "Greenery Detection": 62,
+        "Sustainability Promoted": 78,
+        "Energy Efficiency Improved": 86
+    },
+    {
+        "State": "Maharashtra",
+        "Divisional": "Pune",
+        "City": "Satara",
+        "Alerts Resolved": 135,
+        "Greenery Detection": 58,
+        "Sustainability Promoted": 72,
+        "Energy Efficiency Improved": 82
+    },
+    {
+        "State": "Maharashtra",
+        "Divisional": "Pune",
+        "City": "Solapur",
+        "Alerts Resolved": 145,
+        "Greenery Detection": 54,
+        "Sustainability Promoted": 69,
+        "Energy Efficiency Improved": 80
+    },
+    {
+        "State": "Maharashtra",
+        "Divisional": "Pune",
+        "City": "Nashik",
+        "Alerts Resolved": 140,
+        "Greenery Detection": 60,
+        "Sustainability Promoted": 75,
+        "Energy Efficiency Improved": 84
+    },
+    {
+        "State": "Maharashtra",
+        "Divisional": "Pune",
+        "City": "Aurangabad",
+        "Alerts Resolved": 142,
+        "Greenery Detection": 56,
+        "Sustainability Promoted": 70,
+        "Energy Efficiency Improved": 78
+    },
+    {
+        "State": "Maharashtra",
+        "Divisional": "Nagpur",
+        "City": "Nagpur City",
+        "Alerts Resolved": 125,
+        "Greenery Detection": 50,
+        "Sustainability Promoted": 63,
+        "Energy Efficiency Improved": 70
+    },
+    {
+        "State": "Maharashtra",
+        "Divisional": "Nagpur",
+        "City": "Wardha",
+        "Alerts Resolved": 135,
+        "Greenery Detection": 53,
+        "Sustainability Promoted": 68,
+        "Energy Efficiency Improved": 72
+    },
+    {
+        "State": "Maharashtra",
+        "Divisional": "Nagpur",
+        "City": "Bhandara",
+        "Alerts Resolved": 140,
+        "Greenery Detection": 55,
+        "Sustainability Promoted": 70,
+        "Energy Efficiency Improved": 75
+    },
+    {
+        "State": "Maharashtra",
+        "Divisional": "Nagpur",
+        "City": "Chandrapur",
+        "Alerts Resolved": 138,
+        "Greenery Detection": 58,
+        "Sustainability Promoted": 73,
+        "Energy Efficiency Improved": 78
+    },
+    {
+        "State": "Maharashtra",
+        "Divisional": "Nagpur",
+        "City": "Gadchiroli",
+        "Alerts Resolved": 120,
+        "Greenery Detection": 52,
+        "Sustainability Promoted": 65,
+        "Energy Efficiency Improved": 70
+    },
+    {
+        "State": "Tamil Nadu",
+        "Divisional": "Chennai",
+        "City": "Chennai City",
+        "Alerts Resolved": 145,
+        "Greenery Detection": 56,
+        "Sustainability Promoted": 75,
+        "Energy Efficiency Improved": 82
+    },
+    {
+        "State": "Tamil Nadu",
+        "Divisional": "Chennai",
+        "City": "Coimbatore",
+        "Alerts Resolved": 130,
+        "Greenery Detection": 54,
+        "Sustainability Promoted": 72,
+        "Energy Efficiency Improved": 78
+    },
+    {
+        "State": "Tamil Nadu",
+        "Divisional": "Chennai",
+        "City": "Madurai",
+        "Alerts Resolved": 140,
+        "Greenery Detection": 50,
+        "Sustainability Promoted": 68,
+        "Energy Efficiency Improved": 75
+    },
+    {
+        "State": "Tamil Nadu",
+        "Divisional": "Madurai",
+        "City": "Virudhunagar",
+        "Alerts Resolved": 115,
+        "Greenery Detection": 48,
+        "Sustainability Promoted": 63,
+        "Energy Efficiency Improved": 70
+    }
+]

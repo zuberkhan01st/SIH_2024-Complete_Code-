@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: flask-yolo-app
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn -b 0.0.0.0:5000 main:app
+    autoDeploy: true
+    
+disk:
+  name: yolo-disk
+  mountPath: /app/storage
+  sizeGB: 5
