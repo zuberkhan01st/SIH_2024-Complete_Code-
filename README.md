@@ -1,4 +1,4 @@
-# Swaccha Vision Backend
+# Swaccha Vision
 
 ## Overview
 Swaccha Vision is an AI-powered waste management solution designed to enhance cleanliness in post offices and public spaces. This project is developed for the **Smart India Hackathon 2024**, leveraging **AI, image processing, and data analytics** to provide real-time waste detection and monitoring.
