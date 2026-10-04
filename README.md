@@ -1,77 +1,57 @@
-# Swaccha Vision
+# Swachhta and LiFE Dashboard - Complete Code
 
-## Overview
-Swaccha Vision is an AI-powered waste management solution designed to enhance cleanliness in post offices and public spaces. This project is developed for the **Smart India Hackathon 2024**, leveraging **AI, image processing, and data analytics** to provide real-time waste detection and monitoring.
+Welcome to the Swachhta and LiFE Dashboard repository—an innovative solution developed for SIH 2024. This project leverages AI, IoT integration, and modern web technologies to promote cleanliness and sustainable living practices
+
+## Table of Contents
+
+1. [Project Overview](#project-overview)
+2. [Features](#features)
+3. [Repository Structure](#repository-structure)
+4. [Technologies Used](#technologies-used)
+5. [Setup and Installation](#setup-and-installation)
+6. [Usage](#usage)
+7. [Contributing](#contributing)
+8. [License](#license)
+
+---
+
+## Project Overview
+
+The **Swachhta and LiFE Dashboard** is designed to monitor, analyze, and maintain cleanliness and green practices in post offices. The project integrates AI-powered image processing and IoT-based waste detection to encourage sustainable living and environmental awareness.
+
+This solution supports:
+- AI-based waste detection.
+- IoT device integration for real-time waste monitoring.
+- Data analytics dashboard for performance insights.
 
 ## Features
-- **AI-Powered Image Analysis**: Detects waste levels using advanced AI models.
-- **Automated Reporting**: Generates reports for authorities to take action.
-- **Secure Authentication & Role-Based Access**: Ensures secure and restricted data access.
-- **Cloud Storage Integration**: Stores images and reports securely.
-- **Real-Time Analytics**: Visual dashboards for data insights and monitoring.
-- **User-Friendly API**: RESTful API for seamless integration.
-- **IoT Integration**: Sensors to track waste levels in real-time.
-- **Grievance Redressal**: Users can report unclean areas via the app.
-- **Sweeper Login & Status Tracking**: Allows sweepers to log in, mark attendance, and update cleaning status.
-- **Postmaster Login**: Provides postmasters with an overview of cleanliness status and grievance reports.
-- **Admin (Divisional Officer) Dashboard**: High-level monitoring and management of multiple post offices.
 
-## Technology Stack
-- **Frontend**: React.js, Next.js, Tailwind CSS, Expo (for React Native mobile app)
-- **Backend**: Node.js, Express.js, Flask (for AI model integration)
-- **Database**: MongoDB, Firebase, PostgreSQL
-- **AI & ML**: TensorFlow, OpenCV, YOLOv8
-- **IoT**: Arduino, MQTT Protocol, Raspberry Pi (for smart waste bins and real-time tracking)
-- **Cloud & Deployment**: AWS Lambda, Docker, Kubernetes, Heroku, Vercel
+- **AI-Powered Waste Detection**: Uses YOLO-based object detection to identify waste in images.
+- **IoT Integration**: Real-time data from IoT devices to monitor cleanliness.
+- **Comprehensive Dashboard**: An interactive interface built with modern frameworks to visualize data and insights.
+- **Modular Codebase**: Organized into separate directories for backend, frontend, and AI models.
 
-## Installation
-Follow these steps to set up the project on your local machine:
 
-```bash
-# Clone the repository
-git clone https://github.com/zuberkhan01st/SIH_2024-Complete_Code.git
+## Technologies Used
 
-# Navigate to the project directory
-cd swaccha-vision_backend
+### Frontend
+- React.js
+- Next.js
+- Chart.js (for data visualization)
 
-# Install dependencies
-npm install
+### Backend
+- Node.js
+- Express.js
+- Flask (for AI model integration)
 
-# Set up environment variables
-cp .env.example .env
+### AI/ML
+- YOLO (You Only Look Once) for object detection
+- TensorFlow/Keras for model training
 
-# Run the application
-npm start
-```
+### IoT
+- Arduino
+- MQTT Protocol
 
-## API Documentation
-Refer to our [API Documentation](https://api-docs.swaccha-vision.com) for detailed information on available endpoints and request formats.
-
-## Contribution Guidelines
-We welcome contributions! Please follow these steps:
-1. Fork the repository.
-2. Create a feature branch (`git checkout -b feature-branch`).
-3. Commit your changes (`git commit -m "Add new feature"`).
-4. Push to your fork (`git push origin feature-branch`).
-5. Open a pull request.
-
-## Deployment
-This project can be deployed using:
-- AWS Lambda
-- Docker
-- Kubernetes
-- Heroku
-
-## Authors and Acknowledgments
-Lead Developer:
-- **Zuber Khan**  
-  - GitHub: [github.com/zuberkhan01st](https://github.com/zuberkhan01st)  
-  - LinkedIn: [linkedin.com/in/zuber-khan-01st](https://www.linkedin.com/in/zuber-khan-01st)  
-
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-## Contact
-For support, reach out to us via:
-- Email: zuberkhan01st@gmail.com
-- Issues: [GitHub Issues](https://github.com/zuberkhan01st/SIH_2024-Complete_Code/issues)
+### Others
+- Docker (for containerization)
+- MongoDB and PostgreSQL (for database management)
